@@ -6,7 +6,8 @@ module.exports = (ipfs) => {
   return {
     ftruncate (path, fd, size, reply) {
       debug({ path })
-
+      reply(0)  // Fix on SCP (Secure Copy)
+      /*
       if (size === 0) {
         ipfs.files.write(path, Buffer.from(''), { truncate: true }, (err) => {
           if (err) {
@@ -20,6 +21,7 @@ module.exports = (ipfs) => {
         // TODO: read size bytes then write with truncate true
         reply(Fuse.ENOTSUP)
       }
+      */
     }
   }
 }
