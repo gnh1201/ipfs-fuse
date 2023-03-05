@@ -43,6 +43,11 @@ npm_config_python=/usr/local/opt/python2/bin/python2 npm i -g ipfs-fuse
 ```
 
 ## Dev
+The recommended node version is 17.
+
+```sh
+nvm use 17
+```
 
 Clone the project and install project dependencies:
 
@@ -50,7 +55,7 @@ Clone the project and install project dependencies:
 npm install
 ```
 
-You need Python 2 to install, so you might need to tell gyp the path to Python2. For me it looked like this:
+(Optional) You need Python 2 to install, so you might need to tell gyp the path to Python2. For me it looked like this:
 
 ```sh
 npm_config_python=/usr/local/opt/python2/bin/python2 npm i
